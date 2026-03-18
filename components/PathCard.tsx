@@ -7,17 +7,17 @@ interface PathCardProps {
   description: string;
   slug: string;
   icon: LucideIcon;
-  colorClass: string;
+  color: string;
 }
 
-export function PathCard({ title, description, slug, icon: Icon, colorClass }: PathCardProps) {
+export function PathCard({ title, description, slug, icon: Icon, color }: PathCardProps) {
   return (
     <Link href={`/${slug}`}>
       <Card className="group relative overflow-hidden bg-card/50 border-border hover:border-slate-500 transition-all duration-300 cursor-pointer h-full">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         
         <CardHeader className="relative z-10 pb-4">
-          <div className={`p-3 rounded-lg w-fit mb-4 bg-slate-900 border border-slate-800 ${colorClass}`}>
+          <div className={`p-3 rounded-lg w-fit mb-4 bg-slate-900 border border-slate-800 ${color}`}>
             <Icon className="w-6 h-6" />
           </div>
           <CardTitle className="text-xl font-semibold text-slate-100 group-hover:text-white transition-colors">

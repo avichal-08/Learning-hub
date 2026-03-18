@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LayoutTemplate, Code2, BrainCircuit, Database, Cpu, Server, ChevronsUpDown, Gamepad2 } from "lucide-react";
+import { ChevronsUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,15 +12,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const LEARNING_PATHS = [
-  { title: "Web Development", slug: "webdev", icon: LayoutTemplate, color: "text-blue-400" },
-  { title: "Data Structures", slug: "dsa", icon: Code2, color: "text-emerald-400" },
-  { title: "Machine Learning", slug: "ml", icon: BrainCircuit, color: "text-purple-400" },
-  { title: "Database Management", slug: "dbms", icon: Database, color: "text-orange-400" },
-  { title: "Operating Systems", slug: "os", icon: Cpu, color: "text-rose-400" },
-  { title: "System Design", slug: "system-design", icon: Server, color: "text-cyan-400" },
-  { title: "Game Development", slug: "game-development", icon: Gamepad2, color: "text-green-400" }
-];
+import { LEARNING_PATHS } from "@/lib/constants";
+
 
 export function PathSwitcher({ currentSlug }: { currentSlug: string }) {
   const currentPath = LEARNING_PATHS.find(p => p.slug === currentSlug) || LEARNING_PATHS[0];
